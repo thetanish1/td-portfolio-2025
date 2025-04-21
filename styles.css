@@ -1,0 +1,220 @@
+/* Custom CSS for the portfolio */
+:root {
+    --primary: #2c3e50;
+    --secondary: #1abc9c;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 75px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: var(--primary) !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 700;
+    letter-spacing: 0.0625rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--secondary);
+}
+
+.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: var(--secondary) !important;
+}
+
+.masthead-avatar {
+    width: 15rem;
+}
+
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: currentColor;
+    border-radius: 1rem;
+}
+
+.divider-custom .divider-custom-line:first-child {
+    margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+    margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+    color: currentColor;
+    font-size: 2rem;
+}
+
+.divider-light .divider-custom-line {
+    background-color: white;
+}
+
+.divider-light .divider-custom-icon {
+    color: white;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+.page-section .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+.portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.portfolio-item .portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background-color: rgba(26, 188, 156, 0.9);
+}
+
+.portfolio-item .portfolio-item-caption:hover {
+    opacity: 1;
+}
+
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    font-size: 1.5rem;
+}
+
+.btn-xl {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #15967d;
+    border-color: #15967d;
+}
+
+.btn-outline-light:hover, .btn-outline-light:focus {
+    color: var(--dark) !important;
+}
+
+.copyright {
+    background-color: var(--primary);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: 17rem;
+    }
+    
+    .navbar {
+        width: 17rem;
+        height: 100vh;
+        padding: 1rem;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(44,62,80,1) 0%, rgba(44,62,80,0.9) 100%);
+    }
+    
+    .navbar-brand {
+        display: flex;
+        margin: auto auto 0;
+        padding: 0.5rem;
+    }
+    
+    .navbar-brand img {
+        height: 1.5rem;
+    }
+    
+    .navbar-collapse {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 0;
+        width: 100%;
+        margin-bottom: auto;
+    }
+    
+    .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-collapse .navbar-nav .nav-item {
+        display: block;
+    }
+    
+    .navbar-collapse .navbar-nav .nav-item .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section {
+        padding: 4rem 0;
+    }
+    
+    .page-section .page-section-heading {
+        font-size: 2rem;
+    }
+}
